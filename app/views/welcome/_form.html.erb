@@ -1,0 +1,19 @@
+<h1> New Tank </h1>
+
+
+
+  <%= form_for @tank do |t| %>
+
+    <%= t.label :make %>
+    <%= t.text_field :make %>
+
+    <%= t.label :model %>
+    <%= t.text_field :model %>
+
+    <%= t.label :year %>
+    <%= t.date_field :year %>
+
+    <%= t.submit %>
+    <%= link_to "Cancel", tanks_path, class: "btn btn-default" %>
+
+  <% end %>
