@@ -1,0 +1,14 @@
+<h1> Listing All Tanks </h1>
+
+<%= link_to "New Tank", new_tank_path %>
+
+<% @tanks.each do |t| %>
+
+<%= link_to  t.make, tank_path(t) %>
+<%= t.model %>
+<%= t.year %>
+
+<%= link_to "Edit", edit_tank_path(t) %>
+<%= link_to "Destroy!!", tank_path(t), method: :delete %>
+
+<% end %>
